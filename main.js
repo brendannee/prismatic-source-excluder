@@ -2,7 +2,9 @@ var sources = [];
 
 function getSettings(cb) {
 	chrome.extension.sendMessage({option: "settings"}, function(response) {
-	  	sources = response.sources.toLowerCase().split('\n');
+		if(response.sources) {
+		  	sources = response.sources.toLowerCase().split('\n');
+		}
 	  	if(response.mashable == "true") {
 			sources.push('mashable');
 		}

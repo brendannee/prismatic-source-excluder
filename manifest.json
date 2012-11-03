@@ -1,6 +1,6 @@
 {
   "name": "Prismatic Source Excluder",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "manifest_version": 2,
   "permissions": ["tabs"],
   "description": "Excludes specified sources from showing up in Prismatic",
