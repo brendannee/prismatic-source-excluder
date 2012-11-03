@@ -3,12 +3,12 @@
   "version": "0.0.1",
   "manifest_version": 2,
   "permissions": ["tabs"],
-  "description": "Excludes sources from Prismatic",
+  "description": "Excludes specified sources from showing up in Prismatic",
   "background" : {
     "scripts": ["background.js"]
   },
   "page_action": {
-    "default_icon" : "cross.png",
+    "default_icon" : "icon16.png",
     "default_title": "Prismatic Source Excluder"
   },
   "content_scripts": [
@@ -18,5 +18,11 @@
       "run_at": "document_start"
     }
   ],
-  "options_page": "options.html"
+  "options_page": "options.html",
+  "icons":
+    { 
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
 }
