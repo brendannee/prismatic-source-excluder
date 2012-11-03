@@ -1,0 +1,22 @@
+{
+  "name": "Prismatic Source Excluder",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "permissions": ["tabs"],
+  "description": "Excludes sources from Prismatic",
+  "background" : {
+    "scripts": ["background.js"]
+  },
+  "page_action": {
+    "default_icon" : "cross.png",
+    "default_title": "Prismatic Source Excluder"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://getprismatic.com/*"],
+      "js": ["jquery-1.8.2.min.js","main.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "options_page": "options.html"
+}

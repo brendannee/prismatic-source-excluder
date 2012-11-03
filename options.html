@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<title>Prismatic Source Excluder Options</title>
+
+<style>
+  body {
+    padding: 10px 100px;
+    font-family: "Lucida Grande", Verdana;
+  }
+
+  #options {
+    padding: 10px;
+    background: #eee;
+    font: 13px "Lucida Grande", Verdana;
+  }
+
+  #options h3 {
+    margin: 0 0 5px;
+  }
+
+  #sources label {
+    display: block;
+  }
+
+  #sources textarea {
+    width: 400px;
+    height: 100px;
+  }
+
+  #messageBox {
+    height: 35px;
+  }
+
+  #saved {
+    display: none;
+    height: 25px;
+    text-align: center;
+    background-color: #dff0d8;
+    padding: 4px 10px;
+    margin: 10px;
+    width: 150px;
+  }
+</style>
+</head>
+<body>
+  <h1>Prismatic Source Excluder</h1>
+  
+  <div id="messageBox">
+    <div id="saved">Settings Saved</div>
+  </div>
+  <div id="options">
+    <h3>Sources to Exclude</h3>
+    <form id="sources">
+      <label>
+        <input type="checkbox" id="mashable"> Mashable
+      </label>
+      <label>
+        <input type="checkbox" id="techcrunch"> TechCrunch
+      </label>
+      <p>Enter source names as they appear in Prismatic, one per line<br>
+      (example: USA Today)<br>
+      <textarea></textarea>
+      </p>
+      <input type="submit" value="Save">
+    </form>
+  </div>
+
+  <script src="jquery-1.8.2.min.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>
