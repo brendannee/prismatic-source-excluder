@@ -16,10 +16,10 @@ function getSettings(cb) {
 }
 
 function hideArticles() {
-	$('.newsfeed .interest[title="Go to this publisher feed"]').each(function(i, item) {
+	$('.newsfeed .interest').each(function(i, item) {
 		if(sources.indexOf($(item).html().toLowerCase()) >= 0) {
 			var article = $(item).parents('.article');
-			console.log("Hid post with title " + $('.title h3 a', article).html());
+			console.log("Hid post with title " + $('h3.title a', article).html() + ' from ' + $(item).html());
 			$(article).remove();
 		}
 	});
